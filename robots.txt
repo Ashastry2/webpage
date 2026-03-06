@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://boston-wib.org/sitemap-index.xml

@@ -40,10 +40,13 @@ const formatTimeOnly = (d: Date) =>
   });
 
 const getTimeZoneAbbr = (d: Date) =>
-  d.toLocaleTimeString('en-us', {
-    timeZone: 'America/New_York',
-    timeZoneName: 'short',
-  }).split(' ').at(-1);
+  d
+    .toLocaleTimeString('en-us', {
+      timeZone: 'America/New_York',
+      timeZoneName: 'short',
+    })
+    .split(' ')
+    .at(-1);
 ---
 
 {

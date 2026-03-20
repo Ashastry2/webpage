@@ -16,7 +16,6 @@ export interface Props {
   location: string[];
   imgsrc: string;
   imgalt: string;
-  imgpos?: string;
   url?: string;
   data_luma_event_id?: string;
   cost?: number;
@@ -33,14 +32,13 @@ const {
   data_luma_event_id,
   imgsrc,
   imgalt,
-  imgpos = 'object-top object-cover',
   cost,
   partnerEvent = false,
   partnerOrganization,
 } = Astro.props;
 
 // Using template literals
-const imgcss = 'h-72 w-full' + { imgpos };
+const imgcss = `h-72 w-full object-contain`;
 
 const metadata: MetaData = {
   title: frontmatter.title,

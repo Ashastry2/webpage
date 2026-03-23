@@ -355,55 +355,7 @@ White British ancestry (UK Biobank data field 22006, coding 1). The healthy volu
 &lt;p&gt;Follow &lt;a href=&quot;https://www.linkedin.com/in/sharvarinarendra/&quot;&gt;Sharvari&lt;/a&gt; and &lt;a href=&quot;https://www.linkedin.com/in/saba-nafees/&quot;&gt;Saba&lt;/a&gt; on LinkedIn!&lt;/p&gt;
 &lt;p&gt;If you enjoyed the episode, &lt;a href=&quot;https://podcast.ausha.co/a-coffee-with-compbio&quot;&gt;please subscribe and leave a review!&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hosted by Ausha. See &lt;a href=&quot;https://ausha.co/privacy-policy&quot;&gt;ausha.co/privacy-policy&lt;/a&gt; for more information&lt;/p&gt;
-</content:encoded><category>science-communication</category><category>computational-biology</category><category>professional-development</category><category>bioinformatics</category><category>hackathons</category><category>nfcore</category><category>nextflow</category><category>networking</category></item><item><title>A Coffee with CompBio: Claude Code for Bioinformatics</title><link>https://boston-wib.org/blog/coffeewithcompbio/s2-e3</link><guid isPermaLink="true">https://boston-wib.org/blog/coffeewithcompbio/s2-e3</guid><pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/coffeeWithCompBio-logo2.png&quot; alt=&quot;Coffee with CompBio Podcast Logo: Four painted women under that podcast title&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
-
-&lt;p&gt;&lt;em&gt;Claude code has taken over the tech world like a storm. But how good is Claude code when it comes to Bioinformatics and Computational Biology? In this episode of A Coffee with Compbio, Saba and Amulya take on the task of testing claude code on a simple task of performing QC on a Peripheral Blood Mononuclear Cells (PBMC) single cell dataset. They find out the dos and don’t with a tool like claude code while comparing it to how a real bioinformatician would analyze these results. Tune into this episode to learn more about Claude code for Bioinformatics.&lt;/em&gt;&lt;/p&gt;
-
-&lt;iframe
-  allow=&quot;autoplay *; encrypted-media *; fullscreen *; clipboard-write&quot;
-  frameborder=&quot;0&quot;
-  height=&quot;175&quot;
-  style=&quot;width:100%;max-width:660px;overflow:hidden;border-radius:10px;&quot;
-  sandbox=&quot;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&quot;
-  src=&quot;https://embed.podcasts.apple.com/us/podcast/hacking-your-way-into-computational-biology/id1817024741?i=1000751241489&quot;
-&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Claude code has taken over the tech world like a storm. But how good is Claude code when it comes to Bioinformatics and Computational Biology? In this episode of A Coffee with Compbio, Saba and Amulya take on the task of testing claude code on a simple task of performing QC on a Peripheral Blood Mononuclear Cells (PBMC) single cell dataset. They find out the dos and don’t with a tool like claude code while comparing it to how a real bioinformatician would analyze these results. Tune into this episode to learn more about Claude code for Bioinformatics. 
-Bonus - We share all the results, markdown files and the single cell RNA QC skills markdown file that you can try on your own! &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Links from the Episode&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Boston-area-Women-in-Bioinformatics/A_coffee_with_compbio_resources/tree/main&quot;&gt;All files related to this episode&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://huggingface.co/spaces/Ashastry2/journalMatch&quot;&gt;JournalMatch&lt;/a&gt;: A vibe-coded tool for finding the right match for your publication by Amulya&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Listen On&lt;/strong&gt;:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
-  &lt;FaApple size={32} className=&quot;text-black dark:text-white&quot; /&gt;{&amp;#39; &amp;#39;}&lt;/p&gt;
-  &lt;a href=&quot;https://podcasts.apple.com/us/podcast/claude-code-for-bioinformatics/id1817024741?i=1000756823979&quot;&gt;
-    Apple
-  &lt;/a&gt;
-&lt;/span&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
-  &lt;FaSpotify size={32} color=&quot;#1DB954&quot; /&gt;{&amp;#39; &amp;#39;}
-  &lt;a href=&quot;https://open.spotify.com/episode/443kSvnJfU8Bubq5r3MnDR&quot;&gt;Spotify&lt;/a&gt;&lt;/p&gt;
-&lt;/span&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
-  &lt;FaBell size={32} className=&quot;text-yellow-600&quot; /&gt; &lt;a href=&quot;https://podcast.boston-wib.org/feed.xml&quot;&gt;RSS Feed&lt;/a&gt;&lt;/p&gt;
-&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;More on this Episode&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;Send us your comments, questions, and suggestions using &lt;a href=&quot;https://forms.gle/ncwo6HZeN4uA9gPg7&quot;&gt;this form&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Thanks &lt;a href=&quot;https://www.linkedin.com/in/amulya-shastry/&quot;&gt;Amulya Shastry&lt;/a&gt; for editing and management support and &lt;a href=&quot;https://www.linkedin.com/in/dinaissakova/&quot;&gt;Dina Issakova&lt;/a&gt; for the cover art and social media support.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Support the Podcast&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;We are looking for sponsors! Please get in touch if you or your business would like to help support this podcast.&lt;/p&gt;
-&lt;p&gt;Follow &lt;a href=&quot;https://www.linkedin.com/in/sharvarinarendra/&quot;&gt;Sharvari&lt;/a&gt; and &lt;a href=&quot;https://www.linkedin.com/in/saba-nafees/&quot;&gt;Saba&lt;/a&gt; on LinkedIn!&lt;/p&gt;
-&lt;p&gt;If you enjoyed the episode, &lt;a href=&quot;https://podcast.ausha.co/a-coffee-with-compbio&quot;&gt;please subscribe and leave a review!&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Hosted by Ausha. See &lt;a href=&quot;https://ausha.co/privacy-policy&quot;&gt;ausha.co/privacy-policy&lt;/a&gt; for more information&lt;/p&gt;
-</content:encoded><category>science-communication</category><category>computational-biology</category><category>professional-development</category><category>bioinformatics</category><category>networking</category><category>claude code</category><category>single cell RNA</category></item><item><title>ctDNA as an oncology endpoint</title><link>https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</guid><pubDate>Mon, 23 Feb 2026 13:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2026-02-10-ctdna-as-a-clinical-endpoint.jpeg&quot; alt=&quot;A research figure compares different brain regions to see where information about what someone is consciously seeing can be decoded most accurately, showing stronger decoding in posterior regions than in prefrontal areas&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>science-communication</category><category>computational-biology</category><category>professional-development</category><category>bioinformatics</category><category>hackathons</category><category>nfcore</category><category>nextflow</category><category>networking</category></item><item><title>ctDNA as an oncology endpoint</title><link>https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</guid><pubDate>Mon, 23 Feb 2026 13:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2026-02-10-ctdna-as-a-clinical-endpoint.jpeg&quot; alt=&quot;A research figure compares different brain regions to see where information about what someone is consciously seeing can be decoded most accurately, showing stronger decoding in posterior regions than in prefrontal areas&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;Takeaways from the FoCR symposium&lt;/em&gt;&lt;/p&gt;
 
@@ -881,7 +833,7 @@ They’ll ask: &amp;quot;Do we have agents that can actually &lt;strong&gt;close
 &lt;p&gt;💠 Curious how this evolves in 2026 and beyond clinically, operationally, and ethically!&lt;/p&gt;
 </content:encoded><category>clinical-data</category><category>artificial-intelligence</category><category>ai</category><category>ai-agents</category><category>data-science</category><category>health-informatics</category><category>health-tech</category></item><item><title>I Fixed the Same Bug Three Times (No One Noticed)</title><link>https://boston-wib.org/blog/quicktake/i-fixed-the-same-bug-three-times</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/i-fixed-the-same-bug-three-times</guid><pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2025-11-20-i-fixed-the-same-bug-three-times.png&quot; alt=&quot;Infographic showing a repeating life cycle: a bug occurs, a fix is applied, the solution is documented, turnover happens, documentation is forgotten, and the cycle repeats.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
-</content:encoded><category>biotech</category><category>data-engineering</category><category>bioinformatics</category><category>technical-debt</category><category>software-engineering</category></item><item><title>Tuesday Tactics: The 3-Question Requirements Filter</title><link>https://boston-wib.org/blog/quicktake/tuesday-tactics-3-question-requirements-filter</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/tuesday-tactics-3-question-requirements-filter</guid><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate><content:encoded/><category>data-science</category><category>data-engineering</category><category>bioinformatics</category><category>product-management</category><category>biotech</category><category>tuesday-tactics</category></item><item><title>Work Life Decoded: Understanding Your Manager&apos;s World</title><link>https://boston-wib.org/blog/work-life-decoded/understanding-your-managers-world</link><guid isPermaLink="true">https://boston-wib.org/blog/work-life-decoded/understanding-your-managers-world</guid><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/Work-Life-Decoded.png&quot; alt=&quot;Work Life Decoded Video Series Thumbnail&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>biotech</category><category>data-engineering</category><category>bioinformatics</category><category>technical-debt</category><category>software-engineering</category></item><item><title>Work Life Decoded: Understanding Your Manager&apos;s World</title><link>https://boston-wib.org/blog/work-life-decoded/understanding-your-managers-world</link><guid isPermaLink="true">https://boston-wib.org/blog/work-life-decoded/understanding-your-managers-world</guid><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/Work-Life-Decoded.png&quot; alt=&quot;Work Life Decoded Video Series Thumbnail&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;How to Building a Strategic Partnership with Your Boss&lt;/em&gt;&lt;/p&gt;
 
@@ -900,7 +852,7 @@ They’ll ask: &amp;quot;Do we have agents that can actually &lt;strong&gt;close
 &lt;li&gt;How to build trust and advocate for yourself strategically&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Watch the full episode &lt;a href=&quot;https://www.patreon.com/posts/new-video-your-143734360&quot;&gt;Work Life Decoded: Understanding Your Manager&amp;#39;s World)&lt;/a&gt; on Patreon.&lt;/p&gt;
-</content:encoded><category>career-advice</category><category>career-development</category><category>manager-relationships</category><category>workplace-strategy</category><category>professional-growth</category><category>work-life-decoded</category></item><item><title>Write the Test First (Even for Your Science)</title><link>https://boston-wib.org/blog/quicktake/write-the-test-first-even-for-your-science</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/write-the-test-first-even-for-your-science</guid><pubDate>Mon, 17 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2025-11-17-write-the-test-first-even-for-your-science.png&quot; alt=&quot;Side‑by‑side flowcharts comparing traditional vs. test‑driven development (TDD) approaches.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>career-advice</category><category>career-development</category><category>manager-relationships</category><category>workplace-strategy</category><category>professional-growth</category><category>work-life-decoded</category></item><item><title>Tuesday Tactics: The 3-Question Requirements Filter</title><link>https://boston-wib.org/blog/quicktake/tuesday-tactics-3-question-requirements-filter</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/tuesday-tactics-3-question-requirements-filter</guid><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate><content:encoded/><category>data-science</category><category>data-engineering</category><category>bioinformatics</category><category>product-management</category><category>biotech</category><category>tuesday-tactics</category></item><item><title>Write the Test First (Even for Your Science)</title><link>https://boston-wib.org/blog/quicktake/write-the-test-first-even-for-your-science</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/write-the-test-first-even-for-your-science</guid><pubDate>Mon, 17 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2025-11-17-write-the-test-first-even-for-your-science.png&quot; alt=&quot;Side‑by‑side flowcharts comparing traditional vs. test‑driven development (TDD) approaches.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;Why data scientists should design error messages that guide users straight to solutions.&lt;/em&gt;&lt;/p&gt;
 

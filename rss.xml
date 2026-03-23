@@ -368,8 +368,8 @@ White British ancestry (UK Biobank data field 22006, coding 1). The healthy volu
   src=&quot;https://embed.podcasts.apple.com/us/podcast/hacking-your-way-into-computational-biology/id1817024741?i=1000751241489&quot;
 &gt;&lt;/iframe&gt;
 
-&lt;p&gt;Claude code has taken over the tech world like a storm. But how good is Claude code when it comes to Bioinformatics and Computational Biology? In this episode of A Coffee with Compbio, Saba and Amulya take on the task of testing claude code on a simple task of performing QC on a Peripheral Blood Mononuclear Cells (PBMC) single cell dataset. They find out the dos and don’t with a tool like claude code while comparing it to how a real bioinformatician would analyze these results. Tune into this episode to learn more about Claude code for Bioinformatics.
-Bonus - We share all the results, markdown files and the single cell RNA QC skills markdown file that you can try on your own!&lt;/p&gt;
+&lt;p&gt;Claude code has taken over the tech world like a storm. But how good is Claude code when it comes to Bioinformatics and Computational Biology? In this episode of A Coffee with Compbio, Saba and Amulya take on the task of testing claude code on a simple task of performing QC on a Peripheral Blood Mononuclear Cells (PBMC) single cell dataset. They find out the dos and don’t with a tool like claude code while comparing it to how a real bioinformatician would analyze these results. Tune into this episode to learn more about Claude code for Bioinformatics. 
+Bonus - We share all the results, markdown files and the single cell RNA QC skills markdown file that you can try on your own! &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Links from the Episode&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Boston-area-Women-in-Bioinformatics/A_coffee_with_compbio_resources/tree/main&quot;&gt;All files related to this episode&lt;/a&gt;&lt;/p&gt;

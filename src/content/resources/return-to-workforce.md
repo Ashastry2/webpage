@@ -4,6 +4,8 @@ description: 'A curated guide for women re-entering bioinformatics after a 1–3
 url: 'https://bwib-return-to-workforce.netlify.app'
 category: 'courses'
 tags:
+  - 'Python'
+  - 'R'
   - 'skills'
   - 'machine-learning'
   - 'career'

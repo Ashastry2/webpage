@@ -312,35 +312,27 @@ White British ancestry (UK Biobank data field 22006, coding 1). The healthy volu
   src=&quot;https://embed.podcasts.apple.com/us/podcast/hacking-your-way-into-computational-biology/id1817024741?i=1000751241489&quot;
 &gt;&lt;/iframe&gt;
 
-&lt;p&gt;Hackathons are not just for coders anymore — computational biologists have made it their own with data, models, and insights! Hackathons can be a great way to understand the trends in your field, meet new people, and network. Do you want to try and participate in a hackathon this year and feel like a true hacker? The wait is over — in this episode we give you all the tea about hackathons, over a cup of coffee! Tune into our latest episode of &amp;quot;A Coffee with CompBio&amp;quot; where Sharvari Narendra and Saba Nafees talk about hackathons and more!&lt;/p&gt;
-&lt;p&gt;If you think you know some more hackathon-related resources, let us know in the comments and we will give you a shoutout in the next episode!&lt;/p&gt;
+&lt;p&gt;Claude code has taken over the tech world like a storm. But how good is Claude code when it comes to Bioinformatics and Computational Biology? In this episode of A Coffee with Compbio, Saba and Amulya take on the task of testing claude code on a simple task of performing QC on a Peripheral Blood Mononuclear Cells (PBMC) single cell dataset. They find out the dos and don’t with a tool like claude code while comparing it to how a real bioinformatician would analyze these results. Tune into this episode to learn more about Claude code for Bioinformatics. 
+Bonus - We share all the results, markdown files and the single cell RNA QC skills markdown file that you can try on your own! &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Links from the Episode&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://podcast.boston-wib.org/&quot;&gt;Season 1 Archive&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://biohackathons.github.io/&quot;&gt;BioHackathons&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://nf-co.re/events/hackathon&quot;&gt;nf-core Hackathon Events&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&amp;lt;strong style={{ color: &amp;#39;red&amp;#39; }}&amp;gt;UPCOMING EVENT -&amp;gt;&lt;/strong&gt; &lt;a href=&quot;https://boston-wib.org/events/20260311_nextflow&quot;&gt;nf-core Hackathon March
-2026&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://college.harvard.edu/student-life/student-stories/how-i-organized-hackathon-harvard&quot;&gt;How I Organized a Hackathon at Harvard&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.bio-itworldexpo.com/fair-data-hackathon&quot;&gt;BIO-IT World FAIR Data Hackathon&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.openhackathons.org/s/&quot;&gt;OpenHackathons&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.mlh.com/seasons/2026/events&quot;&gt;MLH 2026 Events&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.codeday.org/&quot;&gt;CodeDay&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://devpost.com/&quot;&gt;Devpost&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://ncbi-codeathons.github.io/&quot;&gt;NCBI Codeathons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/Boston-area-Women-in-Bioinformatics/A_coffee_with_compbio_resources/tree/main&quot;&gt;All files related to this episode&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://huggingface.co/spaces/Ashastry2/journalMatch&quot;&gt;JournalMatch&lt;/a&gt;: A vibe-coded tool for finding the right match for your publication by Amulya&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Listen On&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
   &lt;FaApple size={32} className=&quot;text-black dark:text-white&quot; /&gt;{&amp;#39; &amp;#39;}&lt;/p&gt;
-  &lt;a href=&quot;https://podcasts.apple.com/us/podcast/hacking-your-way-into-computational-biology/id1817024741?i=1000751241489&quot;&gt;
+  &lt;a href=&quot;https://podcasts.apple.com/us/podcast/claude-code-for-bioinformatics/id1817024741?i=1000756823979&quot;&gt;
     Apple
   &lt;/a&gt;
 &lt;/span&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
   &lt;FaSpotify size={32} color=&quot;#1DB954&quot; /&gt;{&amp;#39; &amp;#39;}
-  &lt;a href=&quot;https://open.spotify.com/episode/5r965ssFfE4O91w1xxxX4x&quot;&gt;Spotify&lt;/a&gt;&lt;/p&gt;
+  &lt;a href=&quot;https://open.spotify.com/episode/443kSvnJfU8Bubq5r3MnDR&quot;&gt;Spotify&lt;/a&gt;&lt;/p&gt;
 &lt;/span&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
@@ -355,7 +347,7 @@ White British ancestry (UK Biobank data field 22006, coding 1). The healthy volu
 &lt;p&gt;Follow &lt;a href=&quot;https://www.linkedin.com/in/sharvarinarendra/&quot;&gt;Sharvari&lt;/a&gt; and &lt;a href=&quot;https://www.linkedin.com/in/saba-nafees/&quot;&gt;Saba&lt;/a&gt; on LinkedIn!&lt;/p&gt;
 &lt;p&gt;If you enjoyed the episode, &lt;a href=&quot;https://podcast.ausha.co/a-coffee-with-compbio&quot;&gt;please subscribe and leave a review!&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Hosted by Ausha. See &lt;a href=&quot;https://ausha.co/privacy-policy&quot;&gt;ausha.co/privacy-policy&lt;/a&gt; for more information&lt;/p&gt;
-</content:encoded><category>science-communication</category><category>computational-biology</category><category>professional-development</category><category>bioinformatics</category><category>hackathons</category><category>nfcore</category><category>nextflow</category><category>networking</category></item><item><title>ctDNA as an oncology endpoint</title><link>https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</guid><pubDate>Mon, 23 Feb 2026 13:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2026-02-10-ctdna-as-a-clinical-endpoint.jpeg&quot; alt=&quot;A research figure compares different brain regions to see where information about what someone is consciously seeing can be decoded most accurately, showing stronger decoding in posterior regions than in prefrontal areas&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>science-communication</category><category>computational-biology</category><category>professional-development</category><category>bioinformatics</category><category>networking</category><category>claude code</category><category>single cell RNA</category></item><item><title>ctDNA as an oncology endpoint</title><link>https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</guid><pubDate>Mon, 23 Feb 2026 13:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2026-02-10-ctdna-as-a-clinical-endpoint.jpeg&quot; alt=&quot;A research figure compares different brain regions to see where information about what someone is consciously seeing can be decoded most accurately, showing stronger decoding in posterior regions than in prefrontal areas&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;Takeaways from the FoCR symposium&lt;/em&gt;&lt;/p&gt;
 

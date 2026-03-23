@@ -39,7 +39,7 @@ export const headerData = {
         },
         {
           text: 'Return To Work',
-          href: 'https://bwib-return-to-workforce.netlify.app',
+          href: getPermalink('/resources/return-to-workforce'),
         },
       ],
     },

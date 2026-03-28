@@ -1,14 +1,63 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Boston Women in Bioinformatics&apos;s Blog</title><description>The online presence of Women in Bioinformatics in the Boston Area</description><link>https://boston-wib.org</link><item><title>A Coffee with CompBio: Claude Code for Bioinformatics</title><link>https://boston-wib.org/blog/coffeewithcompbio/s2-e2</link><guid isPermaLink="true">https://boston-wib.org/blog/coffeewithcompbio/s2-e2</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/coffeeWithCompBio-logo2.png&quot; alt=&quot;Coffee with CompBio Podcast Logo: Four painted women under that podcast title&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Boston Women in Bioinformatics&apos;s Blog</title><description>The online presence of Women in Bioinformatics in the Boston Area</description><link>https://boston-wib.org</link><item><title>Biobank Intro Series: All of Us Observational Data (Part I)</title><link>https://boston-wib.org/blog/biobank-intro-series/04-aou-observational-data-partI</link><guid isPermaLink="true">https://boston-wib.org/blog/biobank-intro-series/04-aou-observational-data-partI</guid><pubDate>Tue, 24 Mar 2026 04:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/biobank1/source_to_standard_omop_square.png&quot; alt=&quot;Flowchart showing hospital data being extracted, transformed via OHDSI vocabularies, and loaded into OMOP relational tables.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+
+&lt;p&gt;&lt;em&gt;Finding concept IDs for the All of Us Researcher Workbench&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;All of Us has returned to the chat (she made her first appearance in the &lt;a href=&quot;../02-hardwareOnUKBandAoU&quot;&gt;hardware post&lt;/a&gt;) and she&amp;#39;s bringing noble intentions and absolutely feral data provenance. UK Biobank is a well-organized remarkable resource, but with &amp;gt;93% European ancestry, it was never designed to represent global genetic diversity. On the other hand, All of Us was explicitly built to oversample underrepresented populations. &lt;a href=&quot;https://www.researchallofus.org/data-tools/data-snapshots/&quot;&gt;With almost 50% of participants identifying as a racial or ethnic minority&lt;/a&gt;, &amp;quot;All of Us&amp;quot; isn&amp;#39;t just a pun. It&amp;#39;s a mission statement. (I wrote more about why that matters &lt;a href=&quot;https://boston-wib.org/blog/deepdive/deigenomics&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;That ambition comes with a data architecture to match. UK Biobank invited ~500,000 people to assessment centers, ran standardized measurements, and stored the results in a single curated dataset with clean field IDs. Even its hospital records flow from a single source: the UK&amp;#39;s publicly funded National Health Service (NHS). All of Us is working with a different reality entirely. It aggregates EHR records from 50+ independent US health systems, enrollment surveys, wearables data, and biosamples, and standardizes all of it after the fact using the OMOP-CDM (&lt;a href=&quot;https://ohdsi.github.io/CommonDataModel/cdm53.html&quot;&gt;Observational Medical Outcomes Partnership Common Data Model&lt;/a&gt;) developed by the Observational Health Data Sciences and Informatics (OHDSI) community. What gets recorded in any given participant&amp;#39;s file follows whatever combination of ICD, LOINC, CPT, or SNOMED their health system happened to use.&lt;/p&gt;
+&lt;p&gt;This is why the workflow feels different. Instead of searching a Showcase and grabbing a field ID, you&amp;#39;re navigating concept IDs, vocabulary mappings, and relational tables: the machinery the OMOP-CDM uses to impose order on that heterogeneity. Concept IDs are the key to unlocking most of what&amp;#39;s available, so let&amp;#39;s start there.&lt;/p&gt;
+&lt;figure class=&quot;my-8 !max-w-none&quot;&gt;
+&lt;img src=&quot;https://boston-wib.org//blog_images/biobank1/source_to_standard_omop.png&quot; alt=&quot;Flowchart showing the process of transforming hospital EHR data into OMOP format.&quot; class=&quot;block dark:hidden !max-w-none mx-auto w-full&quot; &gt;
+&lt;img src=&quot;https://boston-wib.org//blog_images/biobank1/source_to_standard_omop_dark.png&quot; alt=&quot;Flowchart showing the process of transforming hospital EHR data into OMOP format.&quot; class=&quot;hidden dark:block !max-w-none mx-auto w-full&quot;&gt;
+&lt;figcaption class=&quot;text-center text-sm opacity-80 mt-2&quot;&gt;
+   &lt;em&gt;Raw hospital data is transformed into standardized OHDSI vocabularies and loaded into OMOP-CDM relational tables.&lt;/em&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2&gt;Finding Concept IDs: Three Approaches&lt;/h2&gt;
+&lt;p&gt;Similar to Field IDs, a concept ID is just a number until you know what it maps to. These three tools each give you a different way to look that up, depending on how much context you need.&lt;/p&gt;
+&lt;h3&gt;1. All of Us Data Browser (fastest for quick lookups)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://databrowser.researchallofus.org&quot;&gt;All of Us Data Browser&lt;/a&gt;&lt;/strong&gt; shows what concepts exist and how often they&amp;#39;re used. Search &amp;quot;systolic blood pressure&amp;quot; and you&amp;#39;ll see results under &amp;quot;Conditions&amp;quot; and &amp;quot;Labs &amp;amp; Measurements&amp;quot; - it can be recorded multiple ways.&lt;/p&gt;
+&lt;p&gt;Click a category to see participant counts and value distributions. For example, 225,000+ participants have concept ID 3004249 (Systolic blood pressure) with source code LOINC 8480-6.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;When to use:&lt;/strong&gt; Quick lookups, checking data availability, getting participant counts.&lt;/p&gt;
+&lt;h3&gt;2. OHDSI Athena Vocabulary (richer metadata)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://athena.ohdsi.org/&quot;&gt;OHDSI Athena&lt;/a&gt;&lt;/strong&gt; provides concept context such as hierarchies, standard vs. non-standard mappings, and relationships. Searching for &amp;quot;systolic blood pressure&amp;quot; returns about 78,865 items at the time of writing. However, if you look up OMOP-CDM concept ID 3004249 (which you found with the All of Us Data Browser), you&amp;#39;ll see its vocabulary source (LOINC), domain (Measurement), and related concepts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;When to use:&lt;/strong&gt; Detailed concept information, exploring relationships, understanding vocabulary mappings.&lt;/p&gt;
+&lt;h3&gt;3. Direct SQL queries (most flexible)&lt;/h3&gt;
+&lt;p&gt;Query the &lt;code&gt;CONCEPT&lt;/code&gt; table directly to translate medical concepts into IDs:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;import pandas as pd
+import os
+
+# Use environmental variable for the Controlled Tier
+CDR = os.environ[&amp;#39;WORKSPACE_CDR&amp;#39;]
+
+# Search by name
+concept_query = f&amp;#39;&amp;#39;&amp;#39;SELECT *
+    FROM `{CDR}.concept`
+    WHERE LOWER(concept_name) LIKE &amp;#39;%systolic blood pressure%&amp;#39;
+    &amp;#39;&amp;#39;&amp;#39;
+sbp_query = pd.io.gbq.read_gbq(concept_query, dialect=&amp;#39;standard&amp;#39;)
+
+# Or query a known concept ID directly
+concept_id_query = pd.io.gbq.read_gbq(f&amp;#39;SELECT * FROM `{CDR}.concept` WHERE concept_id = 3004249&amp;#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Use &lt;code&gt;CONCEPT_RELATIONSHIP&lt;/code&gt; to explore how concepts relate - for example, which ICD-10 codes map to SNOMED concept 3004249.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;When to use:&lt;/strong&gt; Complex relationship queries, programmatic vocabulary exploration.&lt;/p&gt;
+&lt;h2&gt;What&amp;#39;s Next&lt;/h2&gt;
+&lt;p&gt;Finding concept IDs is the first step, but you need to navigate the relational tables to actually pull observational data. In Part II, we&amp;#39;ll get into the messier, more interesting part.&lt;/p&gt;
+</content:encoded><category>biobank</category><category>all-of-us</category><category>omop</category><category>athena</category><category>ehr-data</category><category>observational-data</category></item><item><title>A Coffee with CompBio: Claude Code for Bioinformatics</title><link>https://boston-wib.org/blog/coffeewithcompbio/s2-e3</link><guid isPermaLink="true">https://boston-wib.org/blog/coffeewithcompbio/s2-e3</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/coffeeWithCompBio-logo2.png&quot; alt=&quot;Coffee with CompBio Podcast Logo: Four painted women under that podcast title&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;Can Claude Code handle real bioinformatics? Saba and Amulya put it to the test.&lt;/em&gt;&lt;/p&gt;
 
 &lt;iframe
-  allow=&quot;autoplay *; encrypted-media *; fullscreen *; clipboard-write&quot;
-  frameborder=&quot;0&quot;
-  height=&quot;175&quot;
-  style=&quot;width:100%;max-width:660px;overflow:hidden;border-radius:10px;&quot;
-  sandbox=&quot;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&quot;
-  src=&quot;https://embed.podcasts.apple.com/us/podcast/hacking-your-way-into-computational-biology/id1817024741?i=1000751241489&quot;
+  data-testid=&quot;embed-iframe&quot;
+  style=&quot;border-radius:12px&quot;
+  src=&quot;https://open.spotify.com/embed/episode/443kSvnJfU8Bubq5r3MnDR?utm_source=generator&quot;
+  width=&quot;100%&quot;
+  height=&quot;352&quot;
+  frameBorder=&quot;0&quot;
+  allowfullscreen=&quot;&quot;
+  allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;
+  loading=&quot;lazy&quot;
 &gt;&lt;/iframe&gt;
 
 &lt;p&gt;Claude code has taken over the tech world like a storm. But how good is Claude code when it comes to Bioinformatics and Computational Biology? In this episode of A Coffee with Compbio, Saba and Amulya take on the task of testing claude code on a simple task: performing QC on a Peripheral Blood Mononuclear Cells (PBMC) single cell dataset. They find out the dos and don’t with a tool like claude code while comparing it to how a real bioinformatician would analyze these results. Tune into this episode to learn more about Claude code for Bioinformatics.&lt;/p&gt;
@@ -347,7 +396,63 @@ White British ancestry (UK Biobank data field 22006, coding 1). The healthy volu
 &lt;/ol&gt;
 &lt;p&gt;Neither instinct serves the project. The discipline I&amp;#39;ve had to learn is this: acknowledge the complexity but focus only on what affects your specific research question.&lt;/p&gt;
 &lt;p&gt;The good news is that this complexity isn&amp;#39;t insurmountable. It just requires understanding the data first. I&amp;#39;ve already fallen into some of these rabbit holes, so hopefully you won&amp;#39;t have to. In a series of posts, I hope to demystify UK Biobank and All of Us so you can navigate them confidently. But let me be clear, I cannot cover every nuance of these massive resources. Your specific research question may surface complexities I haven&amp;#39;t encountered. What I can give you are foundational issues that matter across most use cases, the patterns to watch for, and questions to ask.&lt;/p&gt;
-</content:encoded><category>biobank</category><category>research-strategy</category><category>project-management</category><category>consulting</category><category>bioinformatics</category><category>data-science</category><category>computational-biology</category><category>biotech</category><category>genetics</category><category>best-practices</category></item><item><title>ctDNA as an oncology endpoint</title><link>https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</guid><pubDate>Mon, 23 Feb 2026 13:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2026-02-10-ctdna-as-a-clinical-endpoint.jpeg&quot; alt=&quot;A research figure compares different brain regions to see where information about what someone is consciously seeing can be decoded most accurately, showing stronger decoding in posterior regions than in prefrontal areas&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>biobank</category><category>research-strategy</category><category>project-management</category><category>consulting</category><category>bioinformatics</category><category>data-science</category><category>computational-biology</category><category>biotech</category><category>genetics</category><category>best-practices</category></item><item><title>A Coffee with CompBio: Hacking your way into computational biology</title><link>https://boston-wib.org/blog/coffeewithcompbio/s2-e2</link><guid isPermaLink="true">https://boston-wib.org/blog/coffeewithcompbio/s2-e2</guid><pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/coffeeWithCompBio-logo2.png&quot; alt=&quot;Coffee with CompBio Podcast Logo: Four painted women under that podcast title&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+
+&lt;p&gt;&lt;em&gt;Hackathons can be a great way to understand the trends in your field, meet new people, and network.&lt;/em&gt;&lt;/p&gt;
+
+&lt;iframe
+  allow=&quot;autoplay *; encrypted-media *; fullscreen *; clipboard-write&quot;
+  frameborder=&quot;0&quot;
+  height=&quot;175&quot;
+  style=&quot;width:100%;max-width:660px;overflow:hidden;border-radius:10px;&quot;
+  sandbox=&quot;allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation&quot;
+  src=&quot;https://embed.podcasts.apple.com/us/podcast/hacking-your-way-into-computational-biology/id1817024741?i=1000751241489&quot;
+&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Hackathons are not just for coders anymore — computational biologists have made it their own with data, models, and insights! Hackathons can be a great way to understand the trends in your field, meet new people, and network. Do you want to try and participate in a hackathon this year and feel like a true hacker? The wait is over — in this episode we give you all the tea about hackathons, over a cup of coffee! Tune into our latest episode of &amp;quot;A Coffee with CompBio&amp;quot; where Sharvari Narendra and Saba Nafees talk about hackathons and more!&lt;/p&gt;
+&lt;p&gt;If you think you know some more hackathon-related resources, let us know in the comments and we will give you a shoutout in the next episode!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Links from the Episode&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://podcast.boston-wib.org/&quot;&gt;Season 1 Archive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://biohackathons.github.io/&quot;&gt;BioHackathons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nf-co.re/events/hackathon&quot;&gt;nf-core Hackathon Events&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&amp;lt;strong style={{ color: &amp;#39;red&amp;#39; }}&amp;gt;UPCOMING EVENT -&amp;gt;&lt;/strong&gt; &lt;a href=&quot;https://boston-wib.org/events/20260311_nextflow&quot;&gt;nf-core Hackathon March
+2026&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://college.harvard.edu/student-life/student-stories/how-i-organized-hackathon-harvard&quot;&gt;How I Organized a Hackathon at Harvard&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.bio-itworldexpo.com/fair-data-hackathon&quot;&gt;BIO-IT World FAIR Data Hackathon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.openhackathons.org/s/&quot;&gt;OpenHackathons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.mlh.com/seasons/2026/events&quot;&gt;MLH 2026 Events&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.codeday.org/&quot;&gt;CodeDay&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://devpost.com/&quot;&gt;Devpost&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ncbi-codeathons.github.io/&quot;&gt;NCBI Codeathons&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Listen On&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
+  &lt;FaApple size={32} className=&quot;text-black dark:text-white&quot; /&gt;{&amp;#39; &amp;#39;}&lt;/p&gt;
+  &lt;a href=&quot;https://podcasts.apple.com/us/podcast/hacking-your-way-into-computational-biology/id1817024741?i=1000751241489&quot;&gt;
+    Apple
+  &lt;/a&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
+  &lt;FaSpotify size={32} color=&quot;#1DB954&quot; /&gt;{&amp;#39; &amp;#39;}
+  &lt;a href=&quot;https://open.spotify.com/episode/5r965ssFfE4O91w1xxxX4x&quot;&gt;Spotify&lt;/a&gt;&lt;/p&gt;
+&lt;/span&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&amp;lt;span style={{ display: &amp;#39;inline-flex&amp;#39;, alignItems: &amp;#39;center&amp;#39;, gap: &amp;#39;0.5em&amp;#39; }}&amp;gt;
+  &lt;FaBell size={32} className=&quot;text-yellow-600&quot; /&gt; &lt;a href=&quot;https://podcast.boston-wib.org/feed.xml&quot;&gt;RSS Feed&lt;/a&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;More on this Episode&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Send us your comments, questions, and suggestions using &lt;a href=&quot;https://forms.gle/ncwo6HZeN4uA9gPg7&quot;&gt;this form&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks &lt;a href=&quot;https://www.linkedin.com/in/amulya-shastry/&quot;&gt;Amulya Shastry&lt;/a&gt; for editing and management support and &lt;a href=&quot;https://www.linkedin.com/in/dinaissakova/&quot;&gt;Dina Issakova&lt;/a&gt; for the cover art and social media support.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Support the Podcast&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;We are looking for sponsors! Please get in touch if you or your business would like to help support this podcast.&lt;/p&gt;
+&lt;p&gt;Follow &lt;a href=&quot;https://www.linkedin.com/in/sharvarinarendra/&quot;&gt;Sharvari&lt;/a&gt; and &lt;a href=&quot;https://www.linkedin.com/in/saba-nafees/&quot;&gt;Saba&lt;/a&gt; on LinkedIn!&lt;/p&gt;
+&lt;p&gt;If you enjoyed the episode, &lt;a href=&quot;https://podcast.ausha.co/a-coffee-with-compbio&quot;&gt;please subscribe and leave a review!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Hosted by Ausha. See &lt;a href=&quot;https://ausha.co/privacy-policy&quot;&gt;ausha.co/privacy-policy&lt;/a&gt; for more information&lt;/p&gt;
+</content:encoded><category>science-communication</category><category>computational-biology</category><category>professional-development</category><category>bioinformatics</category><category>hackathons</category><category>nfcore</category><category>nextflow</category><category>networking</category></item><item><title>ctDNA as an oncology endpoint</title><link>https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/ctdna-as-an-oncology-endpoint</guid><pubDate>Mon, 23 Feb 2026 13:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2026-02-10-ctdna-as-a-clinical-endpoint.jpeg&quot; alt=&quot;A research figure compares different brain regions to see where information about what someone is consciously seeing can be decoded most accurately, showing stronger decoding in posterior regions than in prefrontal areas&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;Takeaways from the FoCR symposium&lt;/em&gt;&lt;/p&gt;
 
@@ -825,7 +930,7 @@ They’ll ask: &amp;quot;Do we have agents that can actually &lt;strong&gt;close
 &lt;p&gt;💠 Curious how this evolves in 2026 and beyond clinically, operationally, and ethically!&lt;/p&gt;
 </content:encoded><category>clinical-data</category><category>artificial-intelligence</category><category>ai</category><category>ai-agents</category><category>data-science</category><category>health-informatics</category><category>health-tech</category></item><item><title>I Fixed the Same Bug Three Times (No One Noticed)</title><link>https://boston-wib.org/blog/quicktake/i-fixed-the-same-bug-three-times</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/i-fixed-the-same-bug-three-times</guid><pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2025-11-20-i-fixed-the-same-bug-three-times.png&quot; alt=&quot;Infographic showing a repeating life cycle: a bug occurs, a fix is applied, the solution is documented, turnover happens, documentation is forgotten, and the cycle repeats.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
-</content:encoded><category>biotech</category><category>data-engineering</category><category>bioinformatics</category><category>technical-debt</category><category>software-engineering</category></item><item><title>Tuesday Tactics: The 3-Question Requirements Filter</title><link>https://boston-wib.org/blog/quicktake/tuesday-tactics-3-question-requirements-filter</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/tuesday-tactics-3-question-requirements-filter</guid><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate><content:encoded/><category>data-science</category><category>data-engineering</category><category>bioinformatics</category><category>product-management</category><category>biotech</category><category>tuesday-tactics</category></item><item><title>Work Life Decoded: Understanding Your Manager&apos;s World</title><link>https://boston-wib.org/blog/work-life-decoded/understanding-your-managers-world</link><guid isPermaLink="true">https://boston-wib.org/blog/work-life-decoded/understanding-your-managers-world</guid><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/Work-Life-Decoded.png&quot; alt=&quot;Work Life Decoded Video Series Thumbnail&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>biotech</category><category>data-engineering</category><category>bioinformatics</category><category>technical-debt</category><category>software-engineering</category></item><item><title>Work Life Decoded: Understanding Your Manager&apos;s World</title><link>https://boston-wib.org/blog/work-life-decoded/understanding-your-managers-world</link><guid isPermaLink="true">https://boston-wib.org/blog/work-life-decoded/understanding-your-managers-world</guid><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/Work-Life-Decoded.png&quot; alt=&quot;Work Life Decoded Video Series Thumbnail&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;How to Building a Strategic Partnership with Your Boss&lt;/em&gt;&lt;/p&gt;
 
@@ -844,7 +949,7 @@ They’ll ask: &amp;quot;Do we have agents that can actually &lt;strong&gt;close
 &lt;li&gt;How to build trust and advocate for yourself strategically&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Watch the full episode &lt;a href=&quot;https://www.patreon.com/posts/new-video-your-143734360&quot;&gt;Work Life Decoded: Understanding Your Manager&amp;#39;s World)&lt;/a&gt; on Patreon.&lt;/p&gt;
-</content:encoded><category>career-advice</category><category>career-development</category><category>manager-relationships</category><category>workplace-strategy</category><category>professional-growth</category><category>work-life-decoded</category></item><item><title>Write the Test First (Even for Your Science)</title><link>https://boston-wib.org/blog/quicktake/write-the-test-first-even-for-your-science</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/write-the-test-first-even-for-your-science</guid><pubDate>Mon, 17 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2025-11-17-write-the-test-first-even-for-your-science.png&quot; alt=&quot;Side‑by‑side flowcharts comparing traditional vs. test‑driven development (TDD) approaches.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>career-advice</category><category>career-development</category><category>manager-relationships</category><category>workplace-strategy</category><category>professional-growth</category><category>work-life-decoded</category></item><item><title>Tuesday Tactics: The 3-Question Requirements Filter</title><link>https://boston-wib.org/blog/quicktake/tuesday-tactics-3-question-requirements-filter</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/tuesday-tactics-3-question-requirements-filter</guid><pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate><content:encoded/><category>data-science</category><category>data-engineering</category><category>bioinformatics</category><category>product-management</category><category>biotech</category><category>tuesday-tactics</category></item><item><title>Write the Test First (Even for Your Science)</title><link>https://boston-wib.org/blog/quicktake/write-the-test-first-even-for-your-science</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/write-the-test-first-even-for-your-science</guid><pubDate>Mon, 17 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2025-11-17-write-the-test-first-even-for-your-science.png&quot; alt=&quot;Side‑by‑side flowcharts comparing traditional vs. test‑driven development (TDD) approaches.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;Why data scientists should design error messages that guide users straight to solutions.&lt;/em&gt;&lt;/p&gt;
 
@@ -938,7 +1043,15 @@ They’re designed to monitor, reason, and respond. They keep learning continuou
 
 &lt;p&gt;&lt;em&gt;What is the best kind of security for your data?&lt;/em&gt;&lt;/p&gt;
 
-</content:encoded><category>data-engineering</category><category>bioinformatics</category><category>data-quality</category><category>biotech</category><category>self-service</category></item><item><title>Work Life Decoded: Your Weekly Win Log – The Career Tool You Didn&apos;t Know You Needed</title><link>https://boston-wib.org/blog/work-life-decoded/your-weekly-win-log</link><guid isPermaLink="true">https://boston-wib.org/blog/work-life-decoded/your-weekly-win-log</guid><pubDate>Tue, 28 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/Work-Life-Decoded.png&quot; alt=&quot;Work Life Decoded Video Series Thumbnail&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>data-engineering</category><category>bioinformatics</category><category>data-quality</category><category>biotech</category><category>self-service</category></item><item><title>Work Life Decoded: Series Introduction</title><link>https://boston-wib.org/blog/work-life-decoded/welcome-to-the-series</link><guid isPermaLink="true">https://boston-wib.org/blog/work-life-decoded/welcome-to-the-series</guid><pubDate>Tue, 28 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/Work-Life-Decoded.png&quot; alt=&quot;Work Life Decoded Video Series Thumbnail&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+
+&lt;p&gt;&lt;em&gt;A new video series that cuts through the myths with real talk on science and careers.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Women in Bioinformatics chairs Lorena and Lina introduce their new video series tackling the career challenges that keep bioinformatics professionals up at night. With over 40 years of combined experience at Harvard, eGenesis, Ginkgo Bioworks, and other leading organizations, they&amp;#39;re sharing the honest conversations about workplace dynamics, negotiation, and career navigation that they wish they&amp;#39;d had access to earlier in their careers.&lt;/p&gt;
+&lt;p&gt;Should you stay at your current job or make a move? How do you handle a colleague taking credit for your work? When should you speak up, and when should you let it go? Each video in the series addresses a specific challenge with practical, actionable advice from leaders who&amp;#39;ve been there.&lt;/p&gt;
+&lt;p&gt;This isn&amp;#39;t about motivational platitudes—it&amp;#39;s real talk about career strategy, advocating for yourself, supporting other minorities in the workplace, and managing the daily realities of working in science.&lt;/p&gt;
+&lt;p&gt;If you&amp;#39;re ready for honest insights on building the career you want, join the Patreon video series, &amp;quot;Work Life Decoded.&amp;quot; The first episode &lt;a href=&quot;http://patreon.com/posts/welcome-to-work-142167916&quot;&gt;Welcome to Work Life Decoded&lt;/a&gt; is available now!&lt;/p&gt;
+</content:encoded><category>early-career</category><category>career-advice</category><category>professional-development</category><category>workplace-culture</category><category>work-life-decoded</category></item><item><title>Work Life Decoded: Your Weekly Win Log – The Career Tool You Didn&apos;t Know You Needed</title><link>https://boston-wib.org/blog/work-life-decoded/your-weekly-win-log</link><guid isPermaLink="true">https://boston-wib.org/blog/work-life-decoded/your-weekly-win-log</guid><pubDate>Tue, 28 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/Work-Life-Decoded.png&quot; alt=&quot;Work Life Decoded Video Series Thumbnail&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;Why you should keep a weekly log of your wins (and how it can transform your career)&lt;/em&gt;&lt;/p&gt;
 
@@ -947,15 +1060,7 @@ They’re designed to monitor, reason, and respond. They keep learning continuou
 &lt;p&gt;The video walks through why this habit matters, what to track, and how to quantify your impact with concrete before/after examples. No more scrambling six months later trying to remember what you accomplished. No more underselling yourself because you forgot the numbers that prove your value.&lt;/p&gt;
 &lt;p&gt;Lorena and Lina created a one-page Quick Reference Guide with practical setup tips and real examples—available exclusively to Patreon supporters along with the full video.
 Ready to build this career-changing habit? Watch &lt;a href=&quot;https://www.patreon.com/posts/your-weekly-win-142523683&quot;&gt;Your Weekly Win Log – The Career Tool You Didn&amp;#39;t Know You Needed&lt;/a&gt; on Patreon and start logging this Friday. Set that 5-minute calendar reminder right now—your future self will thank you.&lt;/p&gt;
-</content:encoded><category>career-advice</category><category>achievement-tracking</category><category>career-strategy</category><category>professional-development</category><category>productivity-tools</category><category>work-life-decoded</category></item><item><title>Work Life Decoded: Series Introduction</title><link>https://boston-wib.org/blog/work-life-decoded/welcome-to-the-series</link><guid isPermaLink="true">https://boston-wib.org/blog/work-life-decoded/welcome-to-the-series</guid><pubDate>Tue, 28 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/Work-Life-Decoded.png&quot; alt=&quot;Work Life Decoded Video Series Thumbnail&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
-
-&lt;p&gt;&lt;em&gt;A new video series that cuts through the myths with real talk on science and careers.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Women in Bioinformatics chairs Lorena and Lina introduce their new video series tackling the career challenges that keep bioinformatics professionals up at night. With over 40 years of combined experience at Harvard, eGenesis, Ginkgo Bioworks, and other leading organizations, they&amp;#39;re sharing the honest conversations about workplace dynamics, negotiation, and career navigation that they wish they&amp;#39;d had access to earlier in their careers.&lt;/p&gt;
-&lt;p&gt;Should you stay at your current job or make a move? How do you handle a colleague taking credit for your work? When should you speak up, and when should you let it go? Each video in the series addresses a specific challenge with practical, actionable advice from leaders who&amp;#39;ve been there.&lt;/p&gt;
-&lt;p&gt;This isn&amp;#39;t about motivational platitudes—it&amp;#39;s real talk about career strategy, advocating for yourself, supporting other minorities in the workplace, and managing the daily realities of working in science.&lt;/p&gt;
-&lt;p&gt;If you&amp;#39;re ready for honest insights on building the career you want, join the Patreon video series, &amp;quot;Work Life Decoded.&amp;quot; The first episode &lt;a href=&quot;http://patreon.com/posts/welcome-to-work-142167916&quot;&gt;Welcome to Work Life Decoded&lt;/a&gt; is available now!&lt;/p&gt;
-</content:encoded><category>early-career</category><category>career-advice</category><category>professional-development</category><category>workplace-culture</category><category>work-life-decoded</category></item><item><title>The Success Criteria Question: Why I Don&apos;t Start with Requirements</title><link>https://boston-wib.org/blog/quicktake/success-criteria-requirements</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/success-criteria-requirements</guid><pubDate>Mon, 27 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2025-10-27-the-success-criteria-question-why-i-dont-start-with-requirements.png&quot; alt=&quot;Bridge diagram showing transformation from vague request &quot;I wish we had...&quot; to specific solution &quot;Quality trend monitoring dashboard&quot; through clarifying questions.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
+</content:encoded><category>career-advice</category><category>achievement-tracking</category><category>career-strategy</category><category>professional-development</category><category>productivity-tools</category><category>work-life-decoded</category></item><item><title>The Success Criteria Question: Why I Don&apos;t Start with Requirements</title><link>https://boston-wib.org/blog/quicktake/success-criteria-requirements</link><guid isPermaLink="true">https://boston-wib.org/blog/quicktake/success-criteria-requirements</guid><pubDate>Mon, 27 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;img src=&quot;https://boston-wib.org//blog_images/2025-10-27-the-success-criteria-question-why-i-dont-start-with-requirements.png&quot; alt=&quot;Bridge diagram showing transformation from vague request &quot;I wish we had...&quot; to specific solution &quot;Quality trend monitoring dashboard&quot; through clarifying questions.&quot; style=&quot;max-width: 100%; height: auto;&quot; /&gt;
 
 &lt;p&gt;&lt;em&gt;The difference between requirements and success criteria&lt;/em&gt;&lt;/p&gt;
 

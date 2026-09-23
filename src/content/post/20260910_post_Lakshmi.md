@@ -8,8 +8,6 @@ authorUrl: 'https://www.linkedin.com/in/lakshmikc/'
 category: 'Deep Dive'
 ---
 
-_**Why better diagnostics, longitudinal data, and female-specific biology are changing medicine’s understanding of risk**_
-
 Medicine can sequence a tumor, visualize individual cells, predict the three-dimensional structure of a protein and monitor a heartbeat from a wristwatch.
 
 Yet many of its foundational assumptions about women’s health remain surprisingly crude.
@@ -50,13 +48,13 @@ Risk-based care is not one-size-fits-all.  For some people it may mean earlier o
 
 One of the most striking reframes in this topic came from the use of menstrual biology as a model of inflammation and repair.
 
-[Ridhi Tariyal](https://www.linkedin.com/in/ridhitariyal/) talked about this topic. Menstruation has traditionally been treated as a reproductive event, an inconvenience or a variable to be controlled. But biologically, it is a recurring, accessible example of tissue breakdown, immune activation, clearance and regeneration.
+[Ridhi Tariyal](https://www.linkedin.com/in/ridhitariyal/) talked about this topic. Menstruation has traditionally been treated as a reproductive event, an inconvenience or a variable to be controlled. But biologically, it is a recurring, accessible example of tissue breakdown, immune activation, clearance and regeneration. (https://www.medrxiv.org/content/10.64898/2025.12.30.25343168v1.full)
 
 In a healthy cycle, inflammation transitions into repair!
 
 Many inflammatory therapies are designed to suppress immune activity and less effective at restoring the programs that rebuild tissue. A disease can therefore become quieter without becoming resolved.
 
-The work described by their team proposes that longitudinal menstrual samples may reveal where an inflammatory process stays along the path from breakdown to repair. Menstrual fluid contains immune, stromal and epithelial information and can be collected repeatedly without surgery. The reported Inflammatory Resolution Score was designed to identify biological state rather than simply disease severity or elapsed time. In a cohort of patients with ulcerative colitis, the score reportedly provided information that was largely distinct from the standard clinical score and helped separate patients with different probabilities of steroid-free remission.
+The work described by Ridhi's team proposes that longitudinal menstrual samples may reveal where an inflammatory process stays along the path from breakdown to repair. Menstrual fluid contains immune, stromal and epithelial information and can be collected repeatedly without surgery. The reported Inflammatory Resolution Score was designed to identify biological state rather than simply disease severity or elapsed time. In a cohort of patients with ulcerative colitis, the score reportedly provided information that was largely distinct from the standard clinical score and helped separate patients with different probabilities of steroid-free remission.
 
 The broader significance could be that a biological process medicine once dismissed as inconvenient may contain information relevant far beyond gynaecology.
 

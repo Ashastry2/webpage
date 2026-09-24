@@ -1,5 +1,5 @@
 ---
-publishDate: 2026-09-10
+publishDate: 2026-09-25
 title: 'Blind Spots: The Data Crisis in Women’s Healthcare'
 excerpt: Why better diagnostics, longitudinal data, and female-specific biology are changing medicine's understanding of risk
 slug: blog/deepdive/blind-spots-data-crisis-womens-health

@@ -3,9 +3,18 @@ publishDate: 2026-09-25
 title: 'Blind Spots: The Data Crisis in Women’s Healthcare'
 excerpt: Why better diagnostics, longitudinal data, and female-specific biology are changing medicine's understanding of risk
 slug: blog/deepdive/blind-spots-data-crisis-womens-health
-author: 'Lakshmi Kuttippurathu'
-authorUrl: 'https://www.linkedin.com/in/lakshmikc/'
+authors:
+  - name: 'Lakshmi Kuttippurathu, Ph.D.'
+    url: 'https://www.linkedin.com/in/lakshmikc/'
+image: public/blog_images/WH-blog-image.png
 category: 'Deep Dive'
+draft: false
+tags:
+  - Women's health
+  - data-science
+  - computational-biology
+  - machine learning
+
 ---
 
 Medicine can sequence a tumor, visualize individual cells, predict the three-dimensional structure of a protein and monitor a heartbeat from a wristwatch.

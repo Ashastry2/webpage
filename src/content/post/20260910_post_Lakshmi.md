@@ -6,7 +6,7 @@ slug: blog/deepdive/blind-spots-data-crisis-womens-health
 authors:
   - name: 'Lakshmi Kuttippurathu, Ph.D.'
     url: 'https://www.linkedin.com/in/lakshmikc/'
-image: public/blog_images/WH-blog-image.png
+image: '/blog_images/WH-blog-image.png'
 category: 'Deep Dive'
 draft: false
 tags:
@@ -14,7 +14,6 @@ tags:
   - data-science
   - computational-biology
   - machine learning
-
 ---
 
 Medicine can sequence a tumor, visualize individual cells, predict the three-dimensional structure of a protein and monitor a heartbeat from a wristwatch.
@@ -51,7 +50,7 @@ One of the clearest shifts looks like the movement away from single measurements
 
 This is an example of how easily high-risk individuals can disappear inside apparently reasonable screening rules.
 
-Risk-based care is not one-size-fits-all.  For some people it may mean earlier or more frequent assessment. For others it may mean avoiding unnecessary procedures. Precision should reduce both neglect and overtreatment.
+Risk-based care is not one-size-fits-all. For some people it may mean earlier or more frequent assessment. For others it may mean avoiding unnecessary procedures. Precision should reduce both neglect and overtreatment.
 
 **What menstruation can teach medicine about inflammation**
 
